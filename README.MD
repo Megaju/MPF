@@ -1,4 +1,4 @@
-MPD - My PHP Framework
+MPF - My PHP Framework
 ======================
 
 ## Start server
