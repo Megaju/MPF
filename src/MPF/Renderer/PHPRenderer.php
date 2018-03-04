@@ -1,11 +1,11 @@
 <?php
-namespace MPF;
+namespace MPF\Renderer;
 
 /**
  * Class Renderer
  * @package MPF
  */
-class Renderer
+class PHPRenderer implements RendererInterface
 {
     /**
      *
@@ -22,6 +22,13 @@ class Renderer
      * @var array
      */
     private $globals = [];
+
+    public function __construct(?string $defaultPath = null)
+    {
+        if (!is_null($defaultPath)) {
+            $this->addPath($defaultPath);
+        }
+    }
 
     /**
      * Permet d'ajouter un chemin pour charger les vues
